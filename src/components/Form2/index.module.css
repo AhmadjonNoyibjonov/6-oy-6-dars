@@ -1,0 +1,67 @@
+.registration-form {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.registration-form h1 {
+  text-align: center;
+  color: #23b574;
+}
+.registration-form h2 {
+  text-align: center;
+  font-style: normal;
+  background-color: #ebf9f3;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.name-Wrpaper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.registration-form label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.registration-form input,
+.registration-form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  height: 45px;
+  border: 1px solid #9e9d9d;
+  border-radius: 8px;
+}
+
+.registration-form .dob {
+  display: flex;
+  justify-content: space-between;
+}
+
+.registration-form .dob select {
+  width: 32%;
+}
+
+.registration-form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.registration-form button:hover {
+  background-color: #0056b3;
+}
