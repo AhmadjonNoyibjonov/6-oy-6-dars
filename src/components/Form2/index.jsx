@@ -1,7 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
 import styles from "./index.module.css";
 
-function RegistrationForm  () {
+function RegistrationForm() {
   const firstNameRef = useRef(null);
   const lastNameRef = useRef(null);
   const emailRef = useRef(null);
@@ -26,61 +26,41 @@ function RegistrationForm  () {
         year: yearRef.current.value,
       },
     };
-    localStorage.setItem('formData', JSON.stringify(formData));
+    localStorage.setItem("formData", JSON.stringify(formData));
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles['registration-form']}>
+    <form onSubmit={handleSubmit} className={styles["registration-form"]}>
       <h1>YourEvent</h1>
       <h2>Online Registration</h2>
-      
-      <div className={styles['name-Wrpaper']}>
-      <label>
-        First Name
-        <input
-          type="text"
-          ref={firstNameRef}
-          placeholder="First Name"
-        />
-      </label>
-      
-      <label>
-        Last Name
-        <input
-          type="text"
-          ref={lastNameRef}
-          placeholder="Last Name"
-        />
-      </label>
+
+      <div className={styles["name-Wrpaper"]}>
+        <label>
+          First Name
+          <input type="text" ref={firstNameRef} placeholder="First Name" />
+        </label>
+
+        <label>
+          Last Name
+          <input type="text" ref={lastNameRef} placeholder="Last Name" />
+        </label>
       </div>
-      
+
       <label>
         Email Address
-        <input
-          type="email"
-          ref={emailRef}
-          placeholder="Email Address"
-        />
+        <input type="email" ref={emailRef} placeholder="Email Address" />
       </label>
-      
+
       <label>
         Company (if applicable)
-        <input
-          type="text"
-          ref={companyRef}
-          placeholder="Company"
-        />
+        <input type="text" ref={companyRef} placeholder="Company" />
       </label>
-      
+
       <label>
         Physical Address
-        <input
-          type="text"
-          ref={addressRef}
-          placeholder="Physical Address"
-        />
+        <input type="text" ref={addressRef} placeholder="Physical Address" />
       </label>
-      
+
       <label>
         Date of Birth
         <div className={styles.dob}>
@@ -102,21 +82,25 @@ function RegistrationForm  () {
           <select ref={dayRef}>
             <option value="">Day</option>
             {[...Array(31)].map((_, i) => (
-              <option key={i + 1} value={i + 1}>{i + 1}</option>
+              <option key={i + 1} value={i + 1}>
+                {i + 1}
+              </option>
             ))}
           </select>
           <select ref={yearRef}>
             <option value="">Year</option>
-            {[...Array(76)].map((_, i) => (
-              <option key={i + 1949} value={i + 1949}>{i + 1949}</option>
+            {[...Array(51)].map((_, i) => (
+              <option key={i + 1973} value={i + 1973}>
+                {i + 1973}
+              </option>
             ))}
           </select>
         </div>
       </label>
-      
+
       <button type="submit">Submit</button>
     </form>
   );
-};
+}
 
 export default RegistrationForm;
